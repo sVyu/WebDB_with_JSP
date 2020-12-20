@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sign-up Form</title>
+</head>
+<body>
+	<H2>Sign-up form</H2>
+	<hr>
+	<!-- form의 action 속성에 따라 submit 버튼 클릭 시 signupResult.jsp 호출-->
+	<form method="post" action="signupResult.jsp">
+	<label>Name</label><br>
+	<input type=text size=20 name="username"><br>
+	
+	<label>Job</label><br>
+	<select name="job">
+		<option selected>None</option>
+		<option>Business</option>
+		<option>IT Company</option>
+		<option>Student</option>
+	</select><br>
+	
+	<label>Hobbies</label><br>
+	<!-- checkbox는 동일 그룹을 같은 name으로 묶어야 한다 -->
+	<!-- 서버 전달 : value 속성 값(O) 보이는 텍스트 값(X) -->
+	<input type="checkbox" name="hobby" value="001-Soccer">Soccer
+	<input type="checkbox" name="hobby" value="002-Travel">Travel
+	<input type="checkbox" name="hobby" value="003-Music">Music
+	<hr>
+	
+	<input type="submit" value="Confirm">
+	<input type="reset" value="Cancle">
+	</form>
+</body>
+</html>
